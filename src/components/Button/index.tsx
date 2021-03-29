@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactElement } from 'react';
+import React, {PropsWithChildren, ReactElement} from 'react';
 import PulseLoader from 'react-spinners/PulseLoader';
 import classNames from 'classnames';
 import styles from './Button.module.css';

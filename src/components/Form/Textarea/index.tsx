@@ -1,5 +1,5 @@
-import React, { ReactElement } from 'react';
-import { FormField, FormFieldProps } from '../FormField';
+import React, {ReactElement} from 'react';
+import {FormField, FormFieldProps} from '../FormField';
 
 export type TextareaProps = FormFieldProps & {
   onChange: (evt: React.ChangeEvent<HTMLTextAreaElement>) => void;

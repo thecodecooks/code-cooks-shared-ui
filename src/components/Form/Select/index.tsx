@@ -1,7 +1,7 @@
-import React, { ComponentPropsWithoutRef, ReactElement } from 'react';
+import React, {ComponentPropsWithoutRef, ReactElement} from 'react';
 import classNames from 'classnames';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import { FormField, FormFieldProps } from '../FormField';
+import {FormField, FormFieldProps} from '../FormField';
 import styles from './Select.module.css';
 
 export type SelectOption = {

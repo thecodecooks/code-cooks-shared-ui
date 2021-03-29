@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
+import React, {ReactElement} from 'react';
 import classNames from 'classnames';
-import { FormField, FormFieldProps } from '../FormField';
+import {FormField, FormFieldProps} from '../FormField';
 import styles from './TextField.module.css';
 
 export type TextFieldProps = FormFieldProps & {

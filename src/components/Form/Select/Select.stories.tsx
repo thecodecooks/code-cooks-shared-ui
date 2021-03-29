@@ -1,6 +1,6 @@
 import React from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
-import { Select, SelectProps, SelectOption } from '.';
+import {Story, Meta} from '@storybook/react/types-6-0';
+import {Select, SelectProps, SelectOption} from '.';
 
 const OPTIONS: SelectOption[] = [
   {

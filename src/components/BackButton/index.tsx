@@ -1,6 +1,6 @@
-import React, { ReactElement } from 'react';
+import React, {ReactElement} from 'react';
 import classnames from 'classnames';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import styles from './BackButton.module.css';
 
@@ -9,19 +9,14 @@ interface BackButtonProps {
   to: string;
 }
 
-const defaultProps: Partial<BackButtonProps> = {
-  className: undefined,
-};
-
-export function BackButton({ className, to }: BackButtonProps): ReactElement {
-  const classes = classnames(styles.root, className);
-
+export function BackButton({
+  className = undefined,
+  to,
+}: BackButtonProps): ReactElement {
   return (
-    <Link className={classes} to={to}>
+    <Link className={classnames(styles.root, className)} to={to}>
       <ChevronLeft />
       Back
     </Link>
   );
 }
-
-BackButton.defaultProps = defaultProps;

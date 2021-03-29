@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, {ReactElement} from 'react';
 import classNames from 'classnames';
 import styles from './Checkbox.module.css';
 
@@ -41,7 +41,7 @@ export function CheckBox({
           value={value}
         />
         <span className={styles.box} />
-        <span dangerouslySetInnerHTML={{ __html: label }} />
+        <span dangerouslySetInnerHTML={{__html: label}} />
       </label>
       {hasErrors &&
         errors.map((error) => (

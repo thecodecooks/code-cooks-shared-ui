@@ -1,7 +1,7 @@
-import React, { ComponentProps } from 'react';
-import { MemoryRouter } from 'react-router-dom';
-import { Story, Meta } from '@storybook/react/types-6-0';
-import { BackButton } from '.';
+import React, {ComponentProps} from 'react';
+import {MemoryRouter} from 'react-router-dom';
+import {Story, Meta} from '@storybook/react/types-6-0';
+import {BackButton} from '.';
 
 export default {
   title: 'Components/Back Button',

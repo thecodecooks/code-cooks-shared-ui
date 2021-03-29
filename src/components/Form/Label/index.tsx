@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactElement } from 'react';
+import React, {PropsWithChildren, ReactElement} from 'react';
 import classNames from 'classnames';
 import styles from './Label.module.css';
 
