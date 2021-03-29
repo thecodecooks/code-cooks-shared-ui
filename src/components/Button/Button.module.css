@@ -4,7 +4,7 @@
 
   background: var(--button-background-color);
   font-family: var(--primary-font-family);
-  border-radius: 40px;
+  border-radius: 5px;
   color: var(--button-color);
   padding: var(--spacing) var(--dbl-spacing);
   border: 2px solid transparent;

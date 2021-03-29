@@ -1,55 +1,46 @@
-import React, { ComponentPropsWithoutRef, ReactElement } from 'react';
-import classNames from 'classnames';
-import FormField from '../../FormField';
-import Down from '../../Icons/Down';
-import styles from './Select.module.css';
+import React, { ComponentPropsWithoutRef, ReactElement } from "react";
+import classNames from "classnames";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import { FormField, FormFieldProps } from "../FormField";
+import styles from "./Select.module.css";
 
-type SelectOption = {
+export type SelectOption = {
   name: string;
   value: string;
 };
 
-type SelectProps = ComponentPropsWithoutRef<'select'> & {
-  className?: string;
-  cypressId?: string;
+export type SelectProps = FormFieldProps & {
   errors?: string[];
   label: string;
+  name: string;
+  onChange: (evt: React.ChangeEvent<HTMLSelectElement>) => void;
   options: SelectOption[];
   readOnly?: boolean;
-  required?: boolean;
-  showDown?: boolean;
+  testId?: string;
+  value: string;
 };
 
-const defaultProps: Partial<SelectProps> = {
-  className: '',
-  cypressId: undefined,
-  errors: [],
-  readOnly: false,
-  required: false,
-  showDown: true,
-};
-
-export default function Select({
-  cypressId,
+export function Select({
+  errors = [],
   name,
   value,
   options,
   label,
   onChange,
   className,
-  readOnly,
-  errors,
-  required,
-  showDown,
+  readOnly = false,
+  required = false,
+  testId,
 }: SelectProps): ReactElement {
-  const cx = classNames(styles.component, className);
-
   return (
     <FormField
       label={label}
-      className={cx}
+      className={classNames(styles.root, className, {
+        [styles.hasErrors]: errors.length,
+      })}
       errors={errors}
       required={required}
+      name={name}
     >
       <div className={styles.wrap}>
         <select
@@ -57,19 +48,18 @@ export default function Select({
           name={name}
           value={value}
           disabled={readOnly}
-          className={styles.select}
-          data-cy={cypressId}
+          data-testId={testId}
         >
-          {options.map(option => (
+          {options.map((option) => (
             <option value={option.value} key={option.value}>
               {option.name}
             </option>
           ))}
         </select>
-        {showDown && <Down />}
+        <KeyboardArrowDownIcon />
       </div>
     </FormField>
   );
 }
 
-Select.defaultProps = defaultProps;
+// Select.defaultProps = defaultProps;

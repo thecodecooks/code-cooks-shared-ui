@@ -3,7 +3,7 @@ import { Story, Meta } from "@storybook/react/types-6-0";
 import { CheckBox } from ".";
 
 export default {
-  title: "Components/Form/Checkbox",
+  title: "Components/Checkbox",
   component: CheckBox,
   parameters: {
     layout: "centered",

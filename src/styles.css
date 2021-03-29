@@ -1,6 +1,9 @@
 :root {
   /* Colors */
+  --grey-100: #deeaff;
+  --border-color: var(--grey-100);
   --error-red: #ef1940;
+  --error-red-light: #fff1f3;
   --primary: #003977;
   --primary-disabled: #d1e7ff;
   --white: #fff;

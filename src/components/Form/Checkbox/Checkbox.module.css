@@ -60,12 +60,12 @@ span.box:after {
 .error label {
   color: var(--error-red);
 }
+
 .error span.box {
   border: 1px solid var(--error-red);
 }
 
 .message {
   font-size: 14px;
-  font-weight: bold;
   color: var(--error-red);
 }

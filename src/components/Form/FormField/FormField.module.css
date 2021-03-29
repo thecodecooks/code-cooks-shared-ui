@@ -1,11 +1,11 @@
 .root {
-  margin-bottom: 30px;
+  --error-placeholder-color: #ffadad;
+  margin-bottom: var(--spacing);
   position: relative;
 }
 
 .root select,
 .root input {
-  font-weight: 300;
   box-sizing: border-box;
 }
 
@@ -14,13 +14,14 @@
 .root textarea {
   width: 100%;
   background: var(--white);
-  border: 1px solid var(--border-grey);
+  border: 1px solid var(--border-color);
   font-size: 14px;
   font-family: var(--primary-font-family);
   border-radius: 3px;
-  padding: 15px;
+  padding: var(--spacing);
   outline: none;
   -webkit-appearance: none;
+  transition: border-color 0.3s;
 }
 
 .root select:focus,
@@ -32,7 +33,7 @@
 .root select::placeholder,
 .root input::placeholder,
 .root textarea::placeholder {
-  color: var(--border-grey);
+  color: var(--grey-100);
   opacity: 1;
 }
 
@@ -41,7 +42,6 @@
   font-family: var(--primary-font-family);
   height: auto;
   line-height: 22px;
-  font-weight: 300;
 }
 
 .error input,
@@ -53,5 +53,17 @@
   color: var(--error-red);
   margin: 10px 0;
   font-size: 13px;
-  font-weight: 300;
+}
+
+.error select,
+.error input,
+.error textarea {
+  border-color: var(--error-red);
+  background-color: var(--error-red-light);
+}
+
+.error select::placeholder,
+.error input::placeholder,
+.error textarea::placeholder {
+  color: var(--error-placeholder-color);
 }
