@@ -1,0 +1,25 @@
+.root {
+  cursor: pointer;
+}
+
+.wrap {
+  position: relative;
+}
+
+.wrap svg {
+  width: 35px;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.select {
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 60px;
+  padding: var(--spacing);
+}

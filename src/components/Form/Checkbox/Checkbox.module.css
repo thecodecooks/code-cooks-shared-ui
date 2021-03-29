@@ -1,0 +1,71 @@
+.root {
+}
+
+.label {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  padding-left: 0;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+  line-height: (18 / 14);
+}
+
+.label:hover input ~ span.box {
+  background-color: var(--primary-light);
+}
+
+.label input:checked ~ span.box {
+  background-color: var(--primary);
+}
+
+.label input:checked ~ span.box:after {
+  display: block;
+}
+
+.label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+}
+
+span.box {
+  --checkbox-box-dimensions: 30px;
+  height: var(--checkbox-box-dimensions);
+  min-width: var(--checkbox-box-dimensions);
+  border: 1px solid var(--primary);
+  background-color: var(--white);
+  margin-right: 15px;
+  position: relative;
+  border-radius: 3px;
+}
+
+span.box:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 13px;
+  top: 9px;
+  width: 2px;
+  height: 7px;
+  border: 1px solid var(--white);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.error label {
+  color: var(--error-red);
+}
+.error span.box {
+  border: 1px solid var(--error-red);
+}
+
+.message {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--error-red);
+}

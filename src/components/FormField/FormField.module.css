@@ -1,0 +1,57 @@
+.root {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.root select,
+.root input {
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+.root select,
+.root input,
+.root textarea {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--border-grey);
+  font-size: 14px;
+  font-family: var(--primary-font-family);
+  border-radius: 3px;
+  padding: 15px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.root select:focus,
+.root input:focus,
+.root textarea:focus {
+  border-color: var(--primary);
+}
+
+.root select::placeholder,
+.root input::placeholder,
+.root textarea::placeholder {
+  color: var(--border-grey);
+  opacity: 1;
+}
+
+.root textarea {
+  padding: 10px;
+  font-family: var(--primary-font-family);
+  height: auto;
+  line-height: 22px;
+  font-weight: 300;
+}
+
+.error input,
+.error textarea {
+  border: 2px solid var(--error-red);
+}
+
+.errorText {
+  color: var(--error-red);
+  margin: 10px 0;
+  font-size: 13px;
+  font-weight: 300;
+}

@@ -1,0 +1,67 @@
+.root {
+  --button-background-color: var(--primary);
+  --button-color: var(--white);
+
+  background: var(--button-background-color);
+  font-family: var(--primary-font-family);
+  border-radius: 40px;
+  color: var(--button-color);
+  padding: var(--spacing) var(--dbl-spacing);
+  border: 2px solid transparent;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+
+.root:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.root:disabled {
+  background: var(--primary-disabled);
+}
+
+.root:active {
+  transform: scale(0.96);
+}
+
+.go {
+  background: #2bb338;
+}
+
+.go:hover {
+  background: #279231;
+}
+
+.inverse {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.inverse:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.inverse:disabled {
+  border-color: var(--primary-disabled);
+  background: transparent;
+  color: var(--primary-disabled);
+}
+
+.white {
+  border-color: var(--white);
+  background-color: transparent;
+}
+
+.white:hover {
+  background: var(--white);
+  color: var(--primary);
+}

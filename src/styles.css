@@ -1,0 +1,15 @@
+:root {
+  /* Colors */
+  --error-red: #ef1940;
+  --primary: #003977;
+  --primary-disabled: #d1e7ff;
+  --white: #fff;
+
+  /* Fonts */
+  --primary-font-family: "IBM Plex Sans", sans-serif;
+
+  /* Spacing */
+  --spacing: 20px;
+  --half-spacing: calc(var(--spacing) / 2);
+  --dbl-spacing: calc(var(--spacing) * 2);
+}

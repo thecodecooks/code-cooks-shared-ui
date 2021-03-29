@@ -1,0 +1,18 @@
+@import 'includes';
+
+.generic-input {
+  label {
+    display: block;
+  }
+
+  input {
+    background: $white;
+    padding: rem(15);
+    width: 100%;
+  }
+}
+
+.sub-text {
+  font-size: rem(14);
+  line-height: (20 / 14);
+}
