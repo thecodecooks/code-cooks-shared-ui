@@ -8,7 +8,7 @@ export default {
   component: BackButton,
   parameters: {
     layout: 'centered',
-  }
+  },
 } as Meta;
 
 const Template: Story<ComponentProps<typeof BackButton>> = (args) => (
@@ -21,4 +21,4 @@ export const Default = Template.bind({});
 
 Default.args = {
   to: '/',
-}
+};

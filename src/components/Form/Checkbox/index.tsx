@@ -1,6 +1,6 @@
-import React, { ReactElement } from "react";
-import classNames from "classnames";
-import styles from "./Checkbox.module.css";
+import React, { ReactElement } from 'react';
+import classNames from 'classnames';
+import styles from './Checkbox.module.css';
 
 type CheckboxProps = {
   checked?: boolean;
@@ -18,7 +18,7 @@ export function CheckBox({
   checked,
   errors = [],
   name,
-  label = "",
+  label = '',
   id,
   value,
   className,

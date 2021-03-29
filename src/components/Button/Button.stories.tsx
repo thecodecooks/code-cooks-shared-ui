@@ -7,7 +7,7 @@ export default {
   component: Button,
   parameters: {
     layout: 'centered',
-  }
+  },
 } as Meta;
 
 const Template: Story<ComponentProps<typeof Button>> = (args) => (
@@ -20,4 +20,4 @@ Default.args = {
   children: 'Test',
   disabled: false,
   loading: false,
-}
+};

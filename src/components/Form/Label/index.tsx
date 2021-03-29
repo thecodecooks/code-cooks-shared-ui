@@ -1,6 +1,6 @@
-import React, { PropsWithChildren, ReactElement } from "react";
-import classNames from "classnames";
-import styles from "./Label.module.css";
+import React, { PropsWithChildren, ReactElement } from 'react';
+import classNames from 'classnames';
+import styles from './Label.module.css';
 
 export type LabelProps = {
   hasErrors?: boolean;

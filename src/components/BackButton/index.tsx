@@ -13,10 +13,7 @@ const defaultProps: Partial<BackButtonProps> = {
   className: undefined,
 };
 
-export function BackButton({
-  className,
-  to,
-}: BackButtonProps): ReactElement {
+export function BackButton({ className, to }: BackButtonProps): ReactElement {
   const classes = classnames(styles.root, className);
 
   return (

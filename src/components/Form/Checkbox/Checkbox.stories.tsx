@@ -1,12 +1,12 @@
-import React, { ComponentProps } from "react";
-import { Story, Meta } from "@storybook/react/types-6-0";
-import { CheckBox } from ".";
+import React, { ComponentProps } from 'react';
+import { Story, Meta } from '@storybook/react/types-6-0';
+import { CheckBox } from '.';
 
 export default {
-  title: "Components/Checkbox",
+  title: 'Components/Checkbox',
   component: CheckBox,
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
 } as Meta;
 
@@ -19,11 +19,11 @@ Default.args = {};
 
 export const WithLabel = Template.bind({});
 WithLabel.args = {
-  label: "Do you accept these terms?",
+  label: 'Do you accept these terms?',
 };
 
 export const WithErrors = Template.bind({});
 WithErrors.args = {
-  label: "Do you accept these terms?",
-  errors: ["You are required to accept our terms", "Another error!"],
+  label: 'Do you accept these terms?',
+  errors: ['You are required to accept our terms', 'Another error!'],
 };

@@ -1,14 +1,14 @@
-import React, { ReactElement } from "react";
-import classNames from "classnames";
-import { FormField, FormFieldProps } from "../FormField";
-import styles from "./TextField.module.css";
+import React, { ReactElement } from 'react';
+import classNames from 'classnames';
+import { FormField, FormFieldProps } from '../FormField';
+import styles from './TextField.module.css';
 
 export type TextFieldProps = FormFieldProps & {
   onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   readOnly?: boolean;
   tabIndex?: number;
-  type?: "text";
+  type?: 'text';
   value: string;
 };
 
@@ -19,7 +19,7 @@ export function TextField({
   placeholder,
   readOnly = false,
   tabIndex = 0,
-  type = "text",
+  type = 'text',
   value,
   ...rest
 }: TextFieldProps): ReactElement {
