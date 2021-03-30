@@ -1,10 +1,10 @@
-import React, {ReactElement} from 'react';
+import React, {ReactElement, ChangeEventHandler} from 'react';
 import classNames from 'classnames';
 import {FormField, FormFieldProps} from '../FormField';
 import styles from './TextField.module.css';
 
 export type TextFieldProps = FormFieldProps & {
-  onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: ChangeEventHandler<HTMLInputElement>;
   placeholder?: string;
   readOnly?: boolean;
   tabIndex?: number;

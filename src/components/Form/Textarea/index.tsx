@@ -1,8 +1,8 @@
-import React, {ReactElement} from 'react';
+import React, {ReactElement, ChangeEventHandler} from 'react';
 import {FormField, FormFieldProps} from '../FormField';
 
 export type TextareaProps = FormFieldProps & {
-  onChange: (evt: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onChange: ChangeEventHandler<HTMLTextAreaElement>;
   placeholder?: string;
   rows?: number;
   value: string;

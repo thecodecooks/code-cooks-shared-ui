@@ -1,4 +1,4 @@
-import React, {ReactElement} from 'react';
+import React, {ReactElement, ChangeEventHandler} from 'react';
 import classNames from 'classnames';
 import styles from './Checkbox.module.css';
 
@@ -6,7 +6,7 @@ type CheckboxProps = {
   checked?: boolean;
   className?: string;
   errors?: string[];
-  onChange: (evt: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: ChangeEventHandler<HTMLInputElement>;
   label?: string;
   name: string;
   id: string;

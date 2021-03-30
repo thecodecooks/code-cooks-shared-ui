@@ -1,4 +1,4 @@
-import React, {ReactElement} from 'react';
+import React, {ReactElement, ChangeEventHandler} from 'react';
 import classNames from 'classnames';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import {FormField, FormFieldProps} from '../FormField';
@@ -13,7 +13,7 @@ export type SelectProps = FormFieldProps & {
   errors?: string[];
   label: string;
   name: string;
-  onChange: (evt: React.ChangeEvent<HTMLSelectElement>) => void;
+  onChange: ChangeEventHandler<HTMLSelectElement>;
   options: SelectOption[];
   readOnly?: boolean;
   testId?: string;
