@@ -1,4 +1,4 @@
-import React, {ComponentPropsWithoutRef, ReactElement} from 'react';
+import React, {ReactElement} from 'react';
 import classNames from 'classnames';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import {FormField, FormFieldProps} from '../FormField';
@@ -61,5 +61,3 @@ export function Select({
     </FormField>
   );
 }
-
-// Select.defaultProps = defaultProps;

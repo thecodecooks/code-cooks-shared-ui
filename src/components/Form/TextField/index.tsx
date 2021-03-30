@@ -29,7 +29,6 @@ export function TextField({
       name={name}
       {...rest}
     >
-      {/* {props.subText && <p className={s["sub-text"]}>{props.subText}</p>} */}
       <input
         type={type}
         onChange={onChange}
@@ -43,6 +42,3 @@ export function TextField({
     </FormField>
   );
 }
-
-// GenericInput.defaultProps = defaultProps;
-// GenericInput.propTypes = propTypes;

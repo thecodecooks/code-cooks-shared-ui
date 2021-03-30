@@ -1,0 +1,19 @@
+.root {
+  min-width: 350px;
+  background-color: red;
+  outline: none;
+  position: relative;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.topContent {
+  background-color: black;
+}
+
+.title {
+  margin-top: 0;
+  font-weight: normal;
+}
