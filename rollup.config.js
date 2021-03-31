@@ -17,7 +17,6 @@ export default {
   ],
   plugins: [
     typescript({
-      outDir: './dist',
       typescript: require('typescript'),
     }),
     uglify(),
