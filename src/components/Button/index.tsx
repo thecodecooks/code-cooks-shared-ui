@@ -10,7 +10,7 @@ export type ButtonProps = {
   onClick?: (evt: React.MouseEvent<HTMLButtonElement>) => void;
   testId?: string;
   variant?: 'default' | 'go' | 'inverse' | 'white';
-  type: 'button' | 'submit';
+  type?: 'button' | 'submit';
 };
 
 export function Button({
