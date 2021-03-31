@@ -1,5 +1,6 @@
 import typescript from 'rollup-plugin-typescript2';
 import postcss from 'rollup-plugin-postcss';
+import {uglify} from 'rollup-plugin-uglify';
 import pkg from './package.json';
 
 export default {
@@ -16,8 +17,10 @@ export default {
   ],
   plugins: [
     typescript({
+      outDir: './dist',
       typescript: require('typescript'),
     }),
+    uglify(),
     postcss({
       minimize: true,
       extract: true,

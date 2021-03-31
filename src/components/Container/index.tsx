@@ -8,7 +8,5 @@ export default function Container({
   children,
   className = '',
 }: ContainerProps): ReactElement {
-  return (
-    <div className={classNames(styles.container, className)}>{children}</div>
-  );
+  return <div className={classNames(styles.root, className)}>{children}</div>;
 }

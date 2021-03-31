@@ -2,7 +2,13 @@
   "name": "code-cooks-shared-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/code-cooks-shared-ui.js",
+  "files": [
+    "dist",
+    "src",
+    "index.d.ts"
+  ],
+  "typings": "dist/index.d.ts",
   "scripts": {
     "build": "npm run clean && rollup -c",
     "build-storybook": "build-storybook",
@@ -10,6 +16,7 @@
     "format:check": "prettier --config .prettierrc --check 'src/**/*.tsx'",
     "format:write": "prettier --config .prettierrc --write 'src/**/*.tsx'",
     "lint": "eslint",
+    "postinstall": "npm run build",
     "storybook": "start-storybook -p 6006"
   },
   "keywords": [],
@@ -28,12 +35,14 @@
     "babel-loader": "^8.2.2",
     "eslint": "^7.23.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-plugin-react": "^7.23.1"
+    "eslint-plugin-react": "^7.23.1",
+    "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "classnames": "^2.2.6",
+    "postcss": "^8.2.9",
     "prettier": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
