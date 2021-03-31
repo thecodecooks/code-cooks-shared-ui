@@ -4,6 +4,9 @@
   "description": "",
   "main": "dist/code-cooks-shared-ui.js",
   "typings": "dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
     "build": "npm run clean && rollup -c 'rollup.config.js'",
     "build-storybook": "build-storybook",
@@ -11,7 +14,6 @@
     "format:check": "prettier --config .prettierrc --check 'src/**/*.tsx'",
     "format:write": "prettier --config .prettierrc --write 'src/**/*.tsx'",
     "lint": "eslint",
-    "postinstall": "npm i && npm run build",
     "storybook": "start-storybook -p 6006"
   },
   "keywords": [],
