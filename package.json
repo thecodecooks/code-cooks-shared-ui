@@ -10,7 +10,7 @@
   ],
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run clean && rollup -c",
+    "build": "npm run clean && rollup -c 'rollup.config.js'",
     "build-storybook": "build-storybook",
     "clean": "rimraf dist",
     "format:check": "prettier --config .prettierrc --check 'src/**/*.tsx'",
