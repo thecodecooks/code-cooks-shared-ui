@@ -1,0 +1,52 @@
+.root {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: var(--spacing);
+}
+
+.root > svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  width: 20px;
+}
+
+.input {
+  font-family: var(--primary-font-family);
+  background: transparent;
+  flex-grow: 1;
+  font-size: 13px;
+  outline: none;
+  margin-left: 5px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1px solid #dedede;
+  padding-left: 50px;
+  transition: box-shadow 0.3s;
+  padding-right: 30px;
+}
+
+.input:focus {
+  box-shadow: 1px 1px 10px #d6d6d6;
+}
+
+.results {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .root {
+    margin-left: 15px;
+  }
+
+  .input {
+    height: 50px;
+  }
+}

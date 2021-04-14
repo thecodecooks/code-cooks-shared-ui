@@ -1,0 +1,19 @@
+.root {
+  display: block;
+
+  /* @include for-size(tablet-landscape-up) {
+    margin-left: 10px;
+    margin-right: 20px;
+  } */
+}
+
+.root svg {
+  max-width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.root path,
+.root polygon {
+  fill: var(--primary);
+}

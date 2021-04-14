@@ -1,0 +1,75 @@
+.root {
+  background-color: var(--background-grey);
+  z-index: 5;
+  right: 0;
+  width: 500px;
+  border-radius: var(--border-radius);
+  padding-top: var(--half-spacing);
+  padding-bottom: var(--half-spacing);
+}
+
+.profilePicture {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: var(--spacing);
+}
+
+.profilePicture img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.result:last-of-type {
+  margin-bottom: 0;
+}
+
+.resultLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: var(--spacing);
+}
+
+.resultLink:hover {
+  background-color: var(--hover-grey);
+}
+
+.name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--black);
+}
+
+.location {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: var(--grey-text);
+}
+
+.searchIconWrapper {
+  background-color: var(--hover-grey);
+  display: block;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: var(--spacing);
+}
+
+.searchText {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing);
+}
+
+.noResults {
+  padding: 0 var(--spacing);
+  color: var(--black);
+  font-weight: bold;
+}

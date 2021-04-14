@@ -1,0 +1,54 @@
+.root {
+  position: relative;
+}
+
+.button {
+  --button-dimension: 40px;
+  --button-color: #868686;
+
+  width: var(--button-dimension);
+  height: var(--button-dimension);
+  border-radius: 50%;
+  border: none;
+  color: var(--button-color);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+}
+
+.menu {
+  position: absolute;
+  width: 250px;
+  background: var(--white);
+  right: 0;
+  border: 1px solid var(--border-grey);
+  top: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.menu ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.menu ul a,
+.menu ul button {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  font-family: var(--primary-font-family);
+  font-size: 14px;
+  background: var(--white);
+  border: none;
+  cursor: pointer;
+  color: var(--dark-text);
+  text-decoration: none;
+}
+
+.menu ul a:hover,
+.menu ul button:hover {
+  background-color: var(--background-grey);
+}
