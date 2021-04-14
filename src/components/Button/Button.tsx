@@ -1,16 +1,16 @@
-import React, {PropsWithChildren, ReactElement} from 'react';
+import React, {
+  PropsWithChildren,
+  ReactElement,
+  ComponentPropsWithoutRef,
+} from 'react';
 import PulseLoader from 'react-spinners/PulseLoader';
-import classNames from 'classnames';
-import styles from './Button.module.css';
+import {ButtonVariants} from './types';
+import {returnButtonClasses} from './utils';
 
-export type ButtonProps = {
-  className?: string;
-  disabled?: boolean;
+export type ButtonProps = ComponentPropsWithoutRef<'button'> & {
   loading?: boolean;
-  onClick?: (evt: React.MouseEvent<HTMLButtonElement>) => void;
   testId?: string;
-  variant?: 'default' | 'go' | 'inverse' | 'white';
-  type?: 'button' | 'submit';
+  variant?: ButtonVariants;
 };
 
 export function Button({
@@ -24,11 +24,7 @@ export function Button({
   variant = 'default',
 }: PropsWithChildren<ButtonProps>): ReactElement {
   const isInverse = variant === 'inverse';
-
-  const cx = classNames(styles.root, className, {
-    [styles[variant]]: variant !== 'default',
-  });
-
+  const cx = returnButtonClasses(variant, className);
   const pulseColour = isInverse ? 'var(--primary)' : 'var(--white)';
 
   return (

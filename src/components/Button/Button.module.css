@@ -1,11 +1,11 @@
 .root {
-  --button-background-color: var(--primary);
-  --button-color: var(--white);
+  --cc-button-solid-color: var(--primary);
+  --cc-button-text-color: var(--white);
 
-  background: var(--button-background-color);
+  background: var(--cc-button-solid-color);
   font-family: var(--primary-font-family);
   border-radius: 5px;
-  color: var(--button-color);
+  color: var(--cc-button-text-color);
   padding: var(--spacing) var(--dbl-spacing);
   border: 2px solid transparent;
   font-size: 14px;
@@ -41,13 +41,13 @@
 
 .inverse {
   background: transparent;
-  border-color: var(--primary);
-  color: var(--primary);
+  border-color: var(--cc-button-solid-color);
+  color: var(--cc-button-text-color);
 }
 
 .inverse:hover {
-  background: var(--primary);
-  color: var(--white);
+  background: var(--cc-button-solid-color);
+  color: var(--cc-button-text-color);
 }
 
 .inverse:disabled {

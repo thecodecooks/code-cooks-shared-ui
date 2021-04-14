@@ -1,5 +1,6 @@
 .root {
-  border-bottom: 1px solid var(--border-color);
+  --cc-header-border-color: var(--border-color);
+  border-bottom: 1px solid var(--cc-header-border-color);
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -12,52 +13,4 @@
   align-items: center;
   justify-content: flex-end;
   width: 80%;
-}
-
-@media (min-width: 768px) {
-  .root {
-    height: var(--site-header-height-tablet);
-  }
-
-  .header {
-    padding: 15px 30px;
-  }
-
-  .left {
-    margin-right: 15px;
-  }
-
-  .topBar {
-    padding: 10px 30px;
-  }
-}
-
-.left {
-  display: flex;
-  align-items: center;
-  /* height: $mobileHeaderHeight; */
-  flex-grow: 1;
-
-  /* @include for-size(tablet-landscape-up) {
-    button {
-      display: none;
-    }
-  } */
-}
-
-.menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s;
-
-  /* @include for-size(desktop-up) {
-    max-height: none;
-    overflow: visible;
-  } */
-}
-
-.close {
-  padding: 0;
-  background: transparent;
-  border: none;
 }
