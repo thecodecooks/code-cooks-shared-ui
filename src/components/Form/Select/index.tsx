@@ -48,7 +48,7 @@ export function Select({
           name={name}
           value={value}
           disabled={readOnly}
-          data-testId={testId}
+          data-testid={testId}
         >
           {options.map((option) => (
             <option value={option.value} key={option.value}>

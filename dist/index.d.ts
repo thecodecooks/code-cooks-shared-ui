@@ -8,3 +8,4 @@ export * from './components/Form/Label';
 export * from './components/Form/Select';
 export * from './components/Form/Textarea';
 export * from './components/Form/TextField';
+export * from './components/Header';
