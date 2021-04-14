@@ -1,42 +1,35 @@
 import React, {ReactElement} from 'react';
 import classnames from 'classnames';
-import {Search} from '../Search';
 import {UserMenu} from './UserMenu';
+import styles from './Header.module.css';
 
 export type HeaderProps = {
   fixed: boolean;
   logo: React.ReactNode;
-  // onLoginClick: VoidFunction;
-  // onLogoutClick: VoidFunction;
-  // onSearchTextChange: (text: string) => void;
+  middle: React.ReactNode;
   profilePicture: string;
-  searchText: string;
 };
 
 export function Header({
   fixed,
   logo,
+  middle,
   profilePicture,
 }: HeaderProps): ReactElement {
-  const classes = classnames('border-b border-gray-200', {
-    fixed,
-  });
+  const classes = classnames(styles.root);
 
   return (
     <header className={classes}>
-      <div className="p-4 flex items-center justify-center">
-        {logo}
-        <div className="ml-auto">
-          {/* <Search /> */}
-          <UserMenu profilePicture={profilePicture}>
-            {/* {isLoggedIn ? (
+      {logo}
+      <div>{middle}</div>
+      {/* <Search /> */}
+      <UserMenu profilePicture={profilePicture}>
+        {/* {isLoggedIn ? (
               <LoggedInMenu onLogoutClick={onLogoutClick} userType={userType} />
             ) : (
               <LoggedOutMenu onLoginClick={onLoginClick} />
             )} */}
-          </UserMenu>
-        </div>
-      </div>
+      </UserMenu>
     </header>
   );
 }
