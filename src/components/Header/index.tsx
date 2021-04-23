@@ -4,10 +4,10 @@ import {UserMenu} from './UserMenu';
 import styles from './Header.module.css';
 
 export type HeaderProps = {
-  fixed: boolean;
+  fixed?: boolean;
   logo: React.ReactNode;
-  middle: React.ReactNode;
-  profilePicture: string;
+  middle?: React.ReactNode;
+  profilePicture?: string;
 };
 
 export function Header({

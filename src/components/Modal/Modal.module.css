@@ -1,0 +1,58 @@
+.root {
+  --modal-content-border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: scroll;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.root.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.content {
+  border-radius: var(--modal-content-border-radius);
+  width: 100%;
+  background: var(--white);
+  padding: 30px;
+  transform: translateY(20px);
+  transition: transform 0.2s;
+}
+
+.close {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-weight: 300;
+  font-size: 28px;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.open .content {
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+  .root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    margin: 0 auto;
+    min-width: 400px;
+    max-width: 500px;
+    max-height: 550px;
+    overflow-y: scroll;
+    width: auto;
+  }
+}
