@@ -1,7 +1,5 @@
 import React, {PropsWithChildren, useRef, useEffect, ReactElement} from 'react';
 import classNames from 'classnames';
-// import Loader from '../Loader';
-// import ErrorBox from '../ErrorBox';
 import styles from './Modal.module.css';
 
 export type ModalProps = PropsWithChildren<{
@@ -10,8 +8,6 @@ export type ModalProps = PropsWithChildren<{
   contentClassName?: string;
   error: string;
   hideCloseButton?: boolean;
-  loading?: boolean;
-  onClose?: VoidFunction;
   open?: boolean;
 }>;
 
@@ -22,28 +18,18 @@ export function Modal({
   contentClassName,
   error = '',
   hideCloseButton = false,
-  loading = false,
-  onClose,
   open = false,
 }: ModalProps): ReactElement {
   const contentRef = useRef<HTMLDivElement>(null);
+  const contentCx = classNames(styles.content, contentClassName);
   const cx = classNames(styles.root, className, {
     [styles.open]: open,
   });
-  const contentCx = classNames(styles.content, contentClassName);
-
-  function close() {
-    closeModal();
-
-    if (onClose) {
-      onClose();
-    }
-  }
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent): void {
       if (event.key === 'Escape') {
-        close();
+        closeModal();
       }
     }
 
@@ -51,7 +37,7 @@ export function Modal({
       if (!contentRef.current) return;
 
       if (!contentRef.current.contains(event.target as Node) && open) {
-        close();
+        closeModal();
       }
     }
 
@@ -71,10 +57,9 @@ export function Modal({
 
   return (
     <div className={cx} role="dialog" aria-modal="true">
-      {/* {loading && <Loader full />} */}
       <div className={contentCx} ref={contentRef}>
         {!hideCloseButton && (
-          <button onClick={close} className={styles.close} type="button">
+          <button onClick={closeModal} className={styles.close} type="button">
             &times;
           </button>
         )}

@@ -5,8 +5,6 @@ export declare type ModalProps = PropsWithChildren<{
     contentClassName?: string;
     error: string;
     hideCloseButton?: boolean;
-    loading?: boolean;
-    onClose?: VoidFunction;
     open?: boolean;
 }>;
-export declare function Modal({ children, className, closeModal, contentClassName, error, hideCloseButton, loading, onClose, open, }: ModalProps): ReactElement;
+export declare function Modal({ children, className, closeModal, contentClassName, error, hideCloseButton, open, }: ModalProps): ReactElement;
